@@ -31,6 +31,7 @@ nav ul li:not(:last-child) {
 }
 
 nav ul li a {
+  position: relative; /* add relative positioning */
   text-decoration: none;
   color: #333333;
   font-weight: bold;
@@ -41,6 +42,22 @@ nav ul li a {
 nav ul li a:hover {
   color: #0088cc;
 }
+
+nav ul li a::before { /* add an underline */
+  content: '';
+  position: absolute;
+  bottom: -2px; /* adjust position to be below the text */
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #0088cc;
+  transition: width 0.3s ease-in-out; /* animate the width */
+}
+
+nav ul li a:hover::before { /* animate the underline */
+  width: 100%;
+}
+
 
 /* Set main styles */
 main {
