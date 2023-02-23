@@ -154,3 +154,21 @@ footer p {
   font-size: 1rem;
   color: #333333;
 }
+.project-slider ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.5s ease-out;
+  flex-wrap: nowrap;
+}
+
+.project-slider li {
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.project-slider img {
+  max-width: 50%;
+  height: auto;
+}
