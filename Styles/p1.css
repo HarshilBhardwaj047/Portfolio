@@ -59,3 +59,50 @@ body {
   .project-link:hover {
   background-color: #004b91;
   }
+
+  /* Set header styles */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 2rem;
+}
+
+nav ul li a {
+  position: relative; /* add relative positioning */
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #0088cc;
+}
+
+nav ul li a::before { /* add an underline */
+  content: '';
+  position: absolute;
+  bottom: -2px; /* adjust position to be below the text */
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #0088cc;
+  transition: width 0.3s ease-in-out; /* animate the width */
+}
+
+nav ul li a:hover::before { /* animate the underline */
+  width: 100%;
+}
