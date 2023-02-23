@@ -171,32 +171,3 @@ footer p {
   max-width: 50%;
   height: auto;
 }
-
-.project-slider ul {
-  display: flex;
-  list-style: cross-fade();
-  transition: transform 0.5s ease-in-out;
-  animation: loop-rotation 10s linear infinite;
-}
-
-.project-slider li {
-  margin-right: 20px;
-  flex-shrink: 0;
-}
-
-.project-slider img {
-  max-width: 50%;
-  height: auto;
-}
-
-@keyframes loop-rotation {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-
-
