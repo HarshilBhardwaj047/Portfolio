@@ -90,11 +90,14 @@ li {
   max-width: 30rem;
 }
 
-img {
-  max-width: 100%;
+li img {
+  max-width: 40%;
   height: auto;
   margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
 }
+
 
 p {
   margin-bottom: 1rem;
