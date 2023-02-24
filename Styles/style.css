@@ -148,51 +148,31 @@ footer p {
   color: #333333;
 }
 
-.project-slider {
-  display: flex; /* add flex display to the project slider container */
-  overflow: hidden; /* hide any overflow of the project slider container */
-}
-
 .project-slider ul {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  transition: transform 0.5s ease-out; /* add a transform transition to the project slider */
+  list-style: cross-fade();
+  transition: transform 0.5s ease-in-out;
+  animation: loop-rotation 10s linear infinite;
 }
 
 .project-slider li {
   margin-right: 20px;
-  transition: transform 0.5s ease-out; /* add a transform transition to each project item */
+  flex-shrink: 0;
 }
 
 .project-slider img {
   max-width: 50%;
+  height: auto;
 }
 
-@media screen and (max-width: 600px) {
-  .project-slider li {
-    margin-right: 10px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .project-slider li {
-    margin-right: 0;
-  }
-}
-
-/* Animate the project slider */
-@keyframes slide {
+@keyframes loop-rotation {
   0% {
-    transform: translateX(0); /* start at position 0 */
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(calc(-100% + 20px)); /* slide to the left by one item's width */
+    transform: translateX(-50%);
   }
 }
 
-/* Set an infinite loop for the animation */
-.project-slider ul {
-  animation: slide 25s linear infinite;
-}
+
+
