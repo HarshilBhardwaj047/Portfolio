@@ -4,6 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+/*Body*/
+body {
+  background-color: #222222;
+  color: #ffffff;
+}
 
 /* Set base font size and family */
 html {
@@ -17,8 +22,8 @@ header {
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #222222;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
 }
 
 nav ul {
@@ -33,7 +38,7 @@ nav ul li:not(:last-child) {
 nav ul li a {
   position: relative; /* add relative positioning */
   text-decoration: none;
-  color: #333333;
+  color: #ffffff;
   font-weight: bold;
   font-size: 1.2rem;
   transition: color 0.3s ease-in-out;
@@ -81,17 +86,10 @@ h2 {
 ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-}
-
-li {
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-  max-width: 30rem;
 }
 
 li img {
-  max-width: 40%;
+  max-width: 100%;
   height: auto;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
@@ -141,7 +139,8 @@ button[type="submit"]:hover {
 
 /* Set footer styles */
 footer {
-  background-color: #f0f0f0;
+  background-color: #222222;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
   text-align: center;
   padding: 1rem 0;
   position: bottom;
@@ -152,5 +151,23 @@ footer {
 
 footer p {
   font-size: 1rem;
-  color: #333333;
+  color: #ffffff;
+}
+.project-slider ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.5s ease-out;
+  flex-wrap: nowrap;
+}
+
+.project-slider li {
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.project-slider img {
+  max-width: 50%;
+  height: auto;
 }
