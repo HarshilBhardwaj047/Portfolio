@@ -9,6 +9,24 @@ navLinks.forEach(link => {
     section.scrollIntoView({ behavior: 'smooth' });
   });
 });
+//slide
+const projectSlider = document.querySelector('.project-slider ul');
+const projectSlides = document.querySelectorAll('.project-slider li');
+
+let slideIndex = 0;
+
+function slideProjects() {
+  if (slideIndex === projectSlides.length - 1) {
+    slideIndex = 0;
+  } else {
+    slideIndex++;
+  }
+  
+  projectSlider.style.transform = `translateX(-${slideIndex * projectSlides[0].offsetWidth}px)`;
+}
+
+setInterval(slideProjects, 2000);
+
 
 //slider
 const projectSlider = document.querySelector('.project-slider ul');
