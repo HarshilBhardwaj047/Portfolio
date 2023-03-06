@@ -21,7 +21,7 @@ function slideProjects() {
   } else {
     slideIndex++;
   }
-  
+
   projectSlider.style.transform = `translateX(-${slideIndex * projectSlides[0].offsetWidth}px)`;
 }
 
@@ -48,14 +48,14 @@ form.addEventListener('submit', (e) => {
       'Accept': 'application/json'
     }
   })
-  .then(response => {
-    if (response.ok) {
-      alert('Thank you for your message! I will get back to you soon.');
-    } else {
-      alert('Oops! There was a problem submitting your form.');
-    }
-  })
-  .catch(error => {
-    console.error(error);
-  });
+    .then(response => {
+      if (response.ok) {
+        alert('Thank you for your message! I will get back to you soon.');
+      } else {
+        alert('Oops! There was a problem submitting your form.');
+      }
+    })
+    .catch(error => {
+      console.error(error);
+    });
 });

@@ -30,9 +30,8 @@ const projects = [
 const urlParams = new URLSearchParams(window.location.search);
 const selectedProjectIndex = urlParams.get('project') - 1;
 const selectedProject = projects[selectedProjectIndex];
-
 // Update the DOM with the selected project data
 projectTitle.textContent = selectedProject.title;
 projectImage.src = selectedProject.image;
-projectDescription.textContent = selectedProject.description;
 projectLink.href = selectedProject.link;
+projectDescription.textContent = selectedProject.description;
